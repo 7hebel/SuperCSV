@@ -3,7 +3,7 @@ CSV LowTypes:
 Number, String
 
 SuperCSV HighTypes:
-Integer, Float, String, Boolean, Array(LIST), DateTime, Object(JSON), Null(NONE)
+Integer, Float, String, Boolean, Array(LIST), DateTime, Object(JSON)
 
 BaseTypes:
 Python builtin types like int, str, float etc.
@@ -136,7 +136,6 @@ class Object[BaseT: dict](_HighType):
         return json.loads(data)
 
 
-
 ANNOTATIONS_TABLE = {
     "interger": Integer,
     "int": Integer,
@@ -155,5 +154,8 @@ ANNOTATIONS_TABLE = {
     "object": Object,
     "obj": Object,
     "o": Object,
+    "datetime": DateTime,
+    "dt": DateTime,
+    "d": DateTime
 }
 
